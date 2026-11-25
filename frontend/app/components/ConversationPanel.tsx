@@ -99,7 +99,7 @@ export default function ConversationPanel({
               
               {message.intent && (
                 <div className="message-meta">
-                  {message.agentMode && <i>{message.agentMode === 'gemini' ? copy.conversation.geminiSupervisor : copy.conversation.safeFallback}</i>}
+                  {message.agentMode && <i>{message.agentMode === 'gemini' ? copy.conversation.geminiSupervisor : copy.conversation.localSupervisor}</i>}
                   {message.taskCount && message.taskCount > 1 && <i>{copy.conversation.steps(message.taskCount)}</i>}
                   <i>{displayIntent(message.intent, copy)}</i>
                   {message.language && <i>{displayLanguage(message.language, copy)}</i>}
